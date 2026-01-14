@@ -4,7 +4,7 @@ b=int(input())
 c=None
 if a!=b:
     c=True
-    print(c)
+    print(c,a,b)
 else:
     c=False
     print(c)
