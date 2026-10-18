@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba42c160-dd17-4c7b-9130-a17014cfb9f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DB/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DB/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/lo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/integration/test_hello_or_bye.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/test_delete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
