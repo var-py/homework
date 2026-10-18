@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# --- Test tooling (CI: lint + unit/integration tests) ---
+pytest>=8.0,<10
+pytest-cov>=6.0,<8
+
+# --- Linting ---
+ruff>=0.9,<1.0

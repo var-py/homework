@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ответ</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+
+    <form method="POST" action="/helloorbye">
+        <label for="choice">привет или пока:</label>
+        <input type="text" id="choice" name="user_choice">
+        <button type="submit">Ответить</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: tests/Dockerfile
+    image: homework-tests:latest
+    working_dir: /HOMEWORK
+    volumes:
+      - ./tests:/HOMEWORK/tests:ro
+      - ./app:/HOMEWORK/app:ro
+    environment:
+      PYTHONPATH: /HOMEWORK
+    command: ["python", "-m", "pytest", "-v", "tests"]

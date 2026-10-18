@@ -1,0 +1,59 @@
+# Production-стек для CD: образ берётся из GHCR (собирается в workflow cd.yml),
+# локально ничего не собирается.
+#
+# Переменные (можно задать в .env на сервере или в окружении):
+#   IMAGE_REPO  - репозиторий образа, по умолчанию ghcr.io/var-py/homework
+#   IMAGE_TAG   - тег образа, по умолчанию latest (CD передаёт SHA/версию)
+#   WEB_PORT    - внешний порт приложения, по умолчанию 80
+#   DB_EXPOSED_PORT - внешний порт PostgreSQL, по умолчанию 5433
+
+name: homework
+
+services:
+  web:
+    image: ${IMAGE_REPO:-ghcr.io/var-py/homework}:${IMAGE_TAG:-latest}
+    container_name: homework_web
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-80}:8080"
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - python -c "import sys, urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=3).status == 200 else 1)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  db:
+    image: postgres:16
+    container_name: homework_db
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME:-postgres}
+      POSTGRES_USER: ${DB_USER:-flask_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-flask_password}
+    ports:
+      - "${DB_EXPOSED_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${DB_USER} -d $${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

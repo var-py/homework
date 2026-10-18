@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf72f758-d932-4bdd-b099-f529c84ffacf" name="Changes" comment="">
+    <list default="true" id="ba42c160-dd17-4c7b-9130-a17014cfb9f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DB/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DB/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/lo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/integration/test_hello_or_bye.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/test_delete.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="Dockerfile" />
         <option value="Python Script" />
       </list>
     </option>
@@ -33,20 +48,25 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/var-py/homework.git&quot;,
-    &quot;accountId&quot;: &quot;2a0393fb-7526-4589-acce-22971ea4e158&quot;
+    &quot;accountId&quot;: &quot;636106a2-2dd8-46ad-9d22-99e37b93ca64&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="38FgLGBLd37KdPLSXMuUF5agtRW" />
+  <component name="ProjectId" id="3F5YvWsT0aSFJ59aEetNelbWPqC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.integration.test_hello_or_bye.test_create_and_delete.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.integration.test_hello_or_bye.test_hello_or_bye_responses.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.unit.test_delete.test_delete_from_db.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -54,7 +74,14 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\homework\app" />
+      <recent name="C:\Users\User\PycharmProjects\homework\static" />
+      <recent name="C:\Users\User\PycharmProjects\homework" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for tests.unit.test_delete.test_delete_from_db">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <option name="ENV_FILES" value="" />
@@ -64,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,8 +104,72 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for tests.integration.test_hello_or_bye.test_create_and_delete" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.integration.test_hello_or_bye.test_create_and_delete&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.integration.test_hello_or_bye.test_hello_or_bye_responses" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.integration.test_hello_or_bye.test_hello_or_bye_responses&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.unit.test_delete.test_delete_from_db" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_delete.test_delete_from_db&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.unit.test_delete.test_delete_from_db" />
+        <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_create_and_delete" />
+        <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_hello_or_bye_responses" />
+        <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -92,11 +183,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cf72f758-d932-4bdd-b099-f529c84ffacf" name="Changes" comment="" />
-      <created>1768400674562</created>
+      <changelist id="ba42c160-dd17-4c7b-9130-a17014cfb9f1" name="Changes" comment="" />
+      <created>1781366628028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1768400674562</updated>
+      <updated>1781366628028</updated>
     </task>
     <servers />
   </component>

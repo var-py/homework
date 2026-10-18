@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>База ответов</title>
+</head>
+<body>
+
+    <table border="1" cellpadding="8" style="margin-top: 15px; border-collapse: collapse;">
+        <tr>
+            <th>id</th>
+            <th>пока/привет</th>
+            <th>удалить?</th>
+        </tr>
+        {% for action in actions %}
+        <tr>
+            <td>{{ action.id }}</td>
+            <td>{{ action.choice }}</td>
+            <td>
+                <form action="/delete/{{ action.id }}" method="POST">
+                    <button type="submit">Удалить</button>
+                </form>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">Пока нет сохраненных ответов.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
