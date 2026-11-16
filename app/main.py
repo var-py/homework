@@ -2,6 +2,7 @@ from flask import Flask, redirect, render_template, request, url_for
 from sqlalchemy import insert, select
 from sqlalchemy.orm import Session
 
+from app.ai_agent import AgentError, ask
 from app.DB.models import UserAction
 from app.DB.session import engine
 
@@ -60,6 +61,19 @@ def dashboard():
 def delete_action(id):
     Delete_fromDB(id)
     return redirect(url_for("dashboard"))
+
+
+@app.route("/ai", methods=["GET", "POST"])
+def ai():
+    """Простая страница: ввод вопроса и ответ ИИ-агента о аспидовых змеях."""
+    question = request.form.get("question", "").strip()
+    answer = error = ""
+    if question:
+        try:
+            answer = ask(question)
+        except AgentError as exc:
+            error = str(exc)
+    return render_template("ai.html", question=question, answer=answer, error=error)
 
 
 if __name__ == "__main__":

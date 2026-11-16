@@ -14,6 +14,7 @@
 | `/helloorbye` | GET/POST | «привет» / «пока», запись действия в БД |
 | `/dashboard` | GET | список сохранённых действий |
 | `/delete/<id>` | POST | удаление записи |
+| `/ai` | GET/POST | ИИ-агент (DeepSeek): вопрос об аспидовых змеях → ответ |
 | `/healthz` | GET | health-check (`{"status": "ok"}`) для Docker и CD |
 
 ## Структура
@@ -22,10 +23,11 @@
 .
 ├── app/
 │   ├── main.py              # Flask-приложение
+│   ├── ai_agent.py          # ИИ-агент DeepSeek: эксперт по аспидовым змеям
 │   ├── DB/
 │   │   ├── models.py        # SQLAlchemy-модели
 │   │   └── session.py       # engine (PostgreSQL в Docker, SQLite в тестах)
-│   └── templates/
+│   └── templates/           # lo.html, dashboard.html, ai.html
 ├── tests/
 │   ├── unit/                # изолированные тесты
 │   ├── integration/         # тесты через Flask test_client
@@ -60,6 +62,26 @@ python -m venv .venv
 make install-dev              # pip install -r requirements-dev.txt
 make test-local
 ```
+
+## ИИ-агент (`/ai`)
+
+Страница `/ai` — простой интерфейс к ИИ-агенту, который отвечает как эксперт по
+аспидовым змеям (семейство Elapidae). Код агента — `app/ai_agent.py`, страница —
+`app/templates/ai.html`.
+
+1. Получите ключ на [platform.deepseek.com/api_keys](https://platform.deepseek.com/api_keys).
+2. Впишите его в `.env`:
+
+   ```env
+   DEEPSEEK_API_KEY=sk-...
+   ```
+
+3. Откройте `/ai`, задайте вопрос и нажмите «Спросить».
+
+Модель — `deepseek-chat`, запросы идут через стандартный `urllib` (новых
+зависимостей нет). Знания агента опираются на статью
+[«Аспидовые змеи» в Википедии](https://ru.wikipedia.org/wiki/Аспидовые_змеи).
+Тесты подменяют вызов API, поэтому ключ и сеть для `pytest` не нужны.
 
 ## Тесты
 
@@ -152,6 +174,7 @@ make prod-up         # production-стек из опубликованного �
 | `DB_HOST` | хост PostgreSQL (`db` внутри compose) |
 | `DB_NAME` / `DB_USER` / `DB_PASSWORD` | параметры БД и контейнера `postgres` |
 | `DB_PORT` | порт PostgreSQL |
+| `DEEPSEEK_API_KEY` | ключ DeepSeek для ИИ-агента `/ai` |
 | `IMAGE_REPO` / `IMAGE_TAG` | образ и тег для `docker-compose.prod.yml` |
 | `WEB_PORT` / `DB_EXPOSED_PORT` | внешние порты production-стека |
 

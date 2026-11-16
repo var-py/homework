@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba42c160-dd17-4c7b-9130-a17014cfb9f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,7 @@
     &quot;Python tests.Python tests for tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for tests.integration.test_hello_or_bye.test_hello_or_bye_responses.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for tests.unit.test_delete.test_delete_from_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ai_agent.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -66,8 +70,8 @@
       <recent name="C:\Users\User\PycharmProjects\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.unit.test_delete.test_delete_from_db">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ai_agent">
+    <configuration name="ai_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/ai_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ai_agent" />
         <item itemvalue="Python tests.Python tests for tests.unit.test_delete.test_delete_from_db" />
         <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_create_and_delete" />
         <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_hello_or_bye_responses" />
         <item itemvalue="Python tests.Python tests for tests.integration.test_hello_or_bye.test_full_cycle_create_and_delete" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
